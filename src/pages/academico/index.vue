@@ -1,0 +1,4 @@
+<template>
+    <Academico/>
+</template>
+
