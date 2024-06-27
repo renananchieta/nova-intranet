@@ -70,7 +70,9 @@
 <script setup>
 import { onMounted, ref } from 'vue';
 import { useRouter } from 'vue-router';
+import { menuModuloAppStore } from '@/stores/menuModulo';
 
+const sideBarMenu = menuModuloAppStore();
 const router = useRouter();
 const nomeModulo = ref('');
 
@@ -256,6 +258,11 @@ const sistemasFiltrados = ref([...sistemas.value]);
 /**
  * Hooks
  */
+onMounted(() => {
+  sideBarMenu.menuModulo = [];
+})
+
+
 </script>
 
 <style scoped>

@@ -64,7 +64,7 @@ const menu = ref([
     },
     { 
         "title": 'Rendimento Escolar', 
-        "icon": 'mdi mdi-file-star-four-points-outline', 
+        "icon": 'mdi mdi-account-multiple-check-outline', 
         "to": "/rendimento-escolar",
         "children": [],
     },
