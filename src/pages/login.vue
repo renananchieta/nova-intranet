@@ -89,7 +89,7 @@ import { useRouter } from 'vue-router';
 const visible = ref(false);
 const carregando = ref(false);
 const form = ref({
-    email: "admin.user@gmail.com",
+    email: "admin.user@seduc.pa.gov.br",
     senha: "12345678",
     device_name: ""
 });
