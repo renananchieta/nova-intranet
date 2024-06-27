@@ -71,10 +71,10 @@ git pull origin main
 
 Para executar o build do projeto via Docker
 ```sh
-docker build -t vuejs-app .
+docker build -t nova-intranet-app .
 ```
 
 Executar o build da aplicação e expondo a porta 8080
 ```sh
-docker run -it -p 8080:80 --rm --name vuejs-app-1 vuejs-app
+docker run -it -p 8081:80 --rm --name nova-intranet-app-1 nova-intranet-app
 ```

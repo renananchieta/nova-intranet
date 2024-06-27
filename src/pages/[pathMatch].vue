@@ -8,10 +8,10 @@
             size="50"
             icon="mdi-alert-circle-outline"
           />
-          <p>Página não encontrada.</p>
+          <p>MÓDULO EM CONSTRUÇÃO.</p>
         </v-card-title>
         <v-card-text>
-          <p>Verifique se o Endereço está correto.</p>
+          <!-- <p>Verifique se o Endereço está correto.</p> -->
         </v-card-text>
       </v-card>
     </v-container>

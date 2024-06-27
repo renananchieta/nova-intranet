@@ -107,6 +107,7 @@ const store = useAppStore();
     nome: 'Administrador',
     perfil: [],
     id: 1,
+    menuModulo:[]
   }
   store.usuario = usuario;
   localStorage.setItem('usuario', JSON.stringify(store.usuario))

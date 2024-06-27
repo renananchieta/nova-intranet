@@ -10,7 +10,6 @@ export const useAppStore = defineStore('app', {
       token: '',
     },
     mensagens: '',
-    erros: [],
-    color: '',
+    menuModulo: [],
   }),
 })

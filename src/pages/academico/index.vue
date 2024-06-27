@@ -1,4 +1,8 @@
 <template>
-    <Academico/>
+    <AcademicoHome/>
 </template>
+
+<script setup>
+
+</script>
 

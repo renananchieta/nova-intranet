@@ -8,6 +8,8 @@
             <!-- <div class="mt-2">{{ store.usuario.nome }}</div> -->
         </v-sheet>
         <v-divider></v-divider>
+        <MenuModulo v-if="sideBarMenu.menuModulo.length > 0"/>
+        <v-divider v-if="sideBarMenu.menuModulo.length > 0"></v-divider>
         <Menu />
 
         <template v-slot:append>
@@ -74,14 +76,17 @@
 <script setup>
 import api from '@/plugins/api';
 import { useAppStore } from '@/stores/app';
+import { menuModuloAppStore } from '@/stores/menuModulo';
 import { useRouter } from 'vue-router';
 import Menu from './Menu.vue';
+import MenuModulo from './MenuModulo.vue';
 import { ref } from 'vue';
 
 /**
  * Data
  */
 const store = useAppStore();
+const sideBarMenu = menuModuloAppStore();
 const router = useRouter();
 const navBar = ref(true);
 
@@ -91,7 +96,6 @@ const items = [
     {title: "Perfil", to: "/minha-conta"},
     {title: "logout", to: "/logout"}
 ];
-const campoPesquisar = ref(false);
 
 /**
  * Methods
