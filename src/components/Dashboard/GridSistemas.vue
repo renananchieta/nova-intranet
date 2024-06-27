@@ -96,6 +96,12 @@ const sistemas = ref([
       to: "/levantamento-necessidades-apoio",
   },
   {
+      nome: "Consulta Pré-Matrícula",
+      icon: "mdi mdi-pencil-box-outline",
+      color: "#0097A7",
+      to: "/consulta-pre-matricula",
+  },
+  {
       nome: "Pedagógico Escolas Tecnológicas",
       icon: "mdi mdi-book-edit",
       color: "#0097A7",
