@@ -1,5 +1,5 @@
 <template>
-    <v-card-text class="text-h6"> <v-icon>mdi mdi-town-hall</v-icon> Módulo Acadêmico </v-card-text>
+    <v-card-text class="text-h6">Bem-vindo ao  Módulo Acadêmico </v-card-text>
 </template>
 
 <script setup>
