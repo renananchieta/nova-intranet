@@ -1,7 +1,7 @@
 <template>
     <v-container>
         <v-card :loading="carregando" elevation="4">
-            <v-card-title>Cadastro de Usuário</v-card-title>
+            <v-card-title>Informações Pessoais</v-card-title>
             <v-divider class="mx-4"/>
 
             <v-card-text>
