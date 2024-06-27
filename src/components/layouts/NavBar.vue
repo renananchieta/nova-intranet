@@ -29,8 +29,8 @@
     <v-app-bar :elevation="1" density="compact" color="">
         <template v-slot:prepend>
             <v-app-bar-nav-icon @click="navBar = !navBar"></v-app-bar-nav-icon>
-            <v-app-bar-title>
-                {{ store.usuario.nome }}
+            <v-app-bar-title class="text-subtitle-1">
+                {{ saudacao }}{{ store.usuario.nome }} 
                 <v-spacer></v-spacer>
             </v-app-bar-title>
         </template>
@@ -80,7 +80,7 @@ import { menuModuloAppStore } from '@/stores/menuModulo';
 import { useRouter } from 'vue-router';
 import Menu from './Menu.vue';
 import MenuModulo from './MenuModulo.vue';
-import { ref } from 'vue';
+import { onMounted, ref } from 'vue';
 
 /**
  * Data
@@ -96,10 +96,29 @@ const items = [
     {title: "Perfil", to: "/minha-conta"},
     {title: "logout", to: "/logout"}
 ];
+const horaAtual = ref();
+const saudacao = ref('');
 
 /**
  * Methods
  */
+const verificarHora = () => {
+    setInterval(() => {
+        horaAtual.value = new Date().toLocaleTimeString();
+    }, 1000);
+}
+
+const saudacaoMessage = () => {
+    horaAtual.value = new Date().getHours();
+    if(horaAtual.value >= 6 && horaAtual.value < 12){
+        saudacao.value = 'Bom dia, ';
+    } else if(horaAtual.value >= 12 && horaAtual.value < 18){
+        saudacao.value = 'Boa tarde, ';
+    } else {
+        saudacao.value = 'Boa noite, ';
+    }
+}
+
 const logout = async() => {
     store.usuario.nome = '';
 
@@ -119,6 +138,14 @@ const logout = async() => {
         alert("falha de comunicação com o servidor.")
     });
 }
+
+/**
+ * Hook
+ */
+onMounted(() => {
+    saudacaoMessage();
+    verificarHora();
+})
 </script>
 
 <style scoped>
